@@ -1,0 +1,31 @@
+{
+  "name": "hello-app-react",
+  "version": "1.0.0",
+  "description": "a full stack mvp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "react-dev": "babel client/src -d client/dist/compiled --source-maps=inline --presets=env,react -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/key-er/hello-app-react.git"
+  },
+  "author": "key-er",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/key-er/hello-app-react/issues"
+  },
+  "homepage": "https://github.com/key-er/hello-app-react#readme",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "express": "^4.16.3",
+    "mysql2": "^1.5.3",
+    "sequelize": "^4.38.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
+  }
+}
