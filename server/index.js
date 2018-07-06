@@ -8,19 +8,21 @@ app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 
+// app.use(session({
+//   secret: 'thisIs4mHelloApp@',
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: { secure: true, maxAge: 7000 }
+// }))
+
+
+
 app.get('/info', (req, res) => {
   // should check the session cookie/token first
     // if it is there then get the relavant data from database for that user and show
     // else redirect to the login page
   res.send('you came to info - a protected page')
 })
-
-
-// app.get('/login', (req, res) => {
-//   console.log(' req came to get /login and the req.body')
-//   res.send('try to login first')
-
-// })
 
 
 app.post('/login', (req, res) => {
@@ -40,6 +42,9 @@ app.post('/login', (req, res) => {
     }
   })
 })
+
+
+
 
 
 app.get('/home', (req, res) => {

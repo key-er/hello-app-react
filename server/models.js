@@ -27,12 +27,13 @@ module.exports = {
   }
 }
 
+// for testing queries
 
-    // db.User.create({
-    //   email: 'abc@yahoo.com',
-    //   password: bcrypt.hashSync('asksd')
-    // }).then((res) => {
-    //   console.log(res)
-    // }).catch((err) => {
-    //   console.log(err.name === 'SequelizeUniqueConstraintError')
-    // })
+// db.User.create({
+//   email: 'abc@yahoo.com',
+//   password: bcrypt.hashSync('asksd')
+// }).then((res) => {
+//   console.log(res)
+// }).catch((err) => {
+//   console.log(err.name === 'SequelizeUniqueConstraintError')
+// })
