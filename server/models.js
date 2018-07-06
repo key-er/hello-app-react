@@ -13,10 +13,26 @@ module.exports = {
   },
 
 
-  createUser: function(email, pwd) {
+  createUser: function(email, pwd, callback) {
     db.User.create({
       email: email,
       password: bcrypt.hashSync(pwd)
+    }).then((res) => {
+      callback(null, res)
+    }).catch((err) => {
+      if (err.name === 'SequelizeUniqueConstraintError') {
+        callback('duplicate error', null)
+      }
     })
   }
 }
+
+
+    // db.User.create({
+    //   email: 'abc@yahoo.com',
+    //   password: bcrypt.hashSync('asksd')
+    // }).then((res) => {
+    //   console.log(res)
+    // }).catch((err) => {
+    //   console.log(err.name === 'SequelizeUniqueConstraintError')
+    // })

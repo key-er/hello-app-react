@@ -1,0 +1,7 @@
+"use strict";
+
+function Info(props) {
+  return React.createElement("div", null);
+}
+window.Info = Info;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9jb21wb25lbnRzL0luZm8uanN4Il0sIm5hbWVzIjpbIkluZm8iLCJwcm9wcyIsIndpbmRvdyJdLCJtYXBwaW5ncyI6Ijs7QUFDQSxTQUFTQSxJQUFULENBQWNDLEtBQWQsRUFBcUI7QUFDbkIsU0FDRSxnQ0FERjtBQU9EO0FBQ0RDLE9BQU9GLElBQVAsR0FBY0EsSUFBZCIsImZpbGUiOiJJbmZvLmpzIiwic291cmNlc0NvbnRlbnQiOlsiXG5mdW5jdGlvbiBJbmZvKHByb3BzKSB7XG4gIHJldHVybiAoXG4gICAgPGRpdj5cblxuXG4gICAgPC9kaXY+XG5cbiAgICApXG59XG53aW5kb3cuSW5mbyA9IEluZm87Il19

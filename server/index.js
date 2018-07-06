@@ -34,16 +34,24 @@ app.post('/login', (req, res) => {
       // send session cookie
       res.send('your mock cookie')
     } else {
-      res.redirect('/signup')
+      res.status(403).send('/signup')
     }
   })
 })
 
 
+app.get('/home', (req, res) => {
+  console.log(' req came to get /signup and the req.body')
+  // should serve open public page
+  res.send('render home')
+})
+
+
+
 app.get('/signup', (req, res) => {
   console.log(' req came to get /signup and the req.body')
   // should serve a signup page
-  res.send('this is you signup page')
+  res.send('render signup')
 })
 
 
@@ -52,8 +60,14 @@ app.post('/signup', (req, res) => {
   console.log(req.body)
   // encrypt this password and then save to db
   // send back the session cookie with set expiration time
-  models.createUser(req.body.email, req.body.password)
-  res.redirect('/info')
+  models.createUser(req.body.email, req.body.password, (err, res) => {
+    if (err === 'duplicate error') {
+      res.send('render signup')
+    } else {
+      res.send('render login')
+    }
+  })
+
 })
 
 
