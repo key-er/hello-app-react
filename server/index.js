@@ -32,9 +32,11 @@ app.post('/login', (req, res) => {
   models.validateUser(req.body.email, req.body.password, (exists) => {
     if (exists) {
       // send session cookie
+      ('user FOUND')
       res.send('your mock cookie')
     } else {
-      res.status(403).send('/signup')
+      ('user NOT FOUND')
+      res.sendStatus(404)
     }
   })
 })
@@ -60,9 +62,9 @@ app.post('/signup', (req, res) => {
   console.log(req.body)
   // encrypt this password and then save to db
   // send back the session cookie with set expiration time
-  models.createUser(req.body.email, req.body.password, (err, res) => {
+  models.createUser(req.body.email, req.body.password, (err, result) => {
     if (err === 'duplicate error') {
-      res.send('render signup')
+      res.status(403).send('render signup')
     } else {
       res.send('render login')
     }

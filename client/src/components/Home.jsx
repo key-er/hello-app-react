@@ -1,5 +1,10 @@
 function Home(props) {
-  return <h2> You are on home page </h2>
+  return (
+    <div>
+      <input type="submit" value="Login" onClick={props.renderLogin}/>
+      <input type="submit" value="Register" onClick={props.renderRegister}/>
+    </div>
+  )
 }
 
 window.Home = Home;

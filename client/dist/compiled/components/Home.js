@@ -2,11 +2,12 @@
 
 function Home(props) {
   return React.createElement(
-    "h2",
+    "div",
     null,
-    " You are on home page "
+    React.createElement("input", { type: "submit", value: "Login", onClick: props.renderLogin }),
+    React.createElement("input", { type: "submit", value: "Register", onClick: props.renderRegister })
   );
 }
 
 window.Home = Home;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9jb21wb25lbnRzL0hvbWUuanN4Il0sIm5hbWVzIjpbIkhvbWUiLCJwcm9wcyIsIndpbmRvdyJdLCJtYXBwaW5ncyI6Ijs7QUFBQSxTQUFTQSxJQUFULENBQWNDLEtBQWQsRUFBcUI7QUFDbkIsU0FBTztBQUFBO0FBQUE7QUFBQTtBQUFBLEdBQVA7QUFDRDs7QUFFREMsT0FBT0YsSUFBUCxHQUFjQSxJQUFkIiwiZmlsZSI6IkhvbWUuanMiLCJzb3VyY2VzQ29udGVudCI6WyJmdW5jdGlvbiBIb21lKHByb3BzKSB7XG4gIHJldHVybiA8aDI+IFlvdSBhcmUgb24gaG9tZSBwYWdlIDwvaDI+XG59XG5cbndpbmRvdy5Ib21lID0gSG9tZTsiXX0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uLy4uL3NyYy9jb21wb25lbnRzL0hvbWUuanN4Il0sIm5hbWVzIjpbIkhvbWUiLCJwcm9wcyIsInJlbmRlckxvZ2luIiwicmVuZGVyUmVnaXN0ZXIiLCJ3aW5kb3ciXSwibWFwcGluZ3MiOiI7O0FBQUEsU0FBU0EsSUFBVCxDQUFjQyxLQUFkLEVBQXFCO0FBQ25CLFNBQ0U7QUFBQTtBQUFBO0FBQ0UsbUNBQU8sTUFBSyxRQUFaLEVBQXFCLE9BQU0sT0FBM0IsRUFBbUMsU0FBU0EsTUFBTUMsV0FBbEQsR0FERjtBQUVFLG1DQUFPLE1BQUssUUFBWixFQUFxQixPQUFNLFVBQTNCLEVBQXNDLFNBQVNELE1BQU1FLGNBQXJEO0FBRkYsR0FERjtBQU1EOztBQUVEQyxPQUFPSixJQUFQLEdBQWNBLElBQWQiLCJmaWxlIjoiSG9tZS5qcyIsInNvdXJjZXNDb250ZW50IjpbImZ1bmN0aW9uIEhvbWUocHJvcHMpIHtcbiAgcmV0dXJuIChcbiAgICA8ZGl2PlxuICAgICAgPGlucHV0IHR5cGU9XCJzdWJtaXRcIiB2YWx1ZT1cIkxvZ2luXCIgb25DbGljaz17cHJvcHMucmVuZGVyTG9naW59Lz5cbiAgICAgIDxpbnB1dCB0eXBlPVwic3VibWl0XCIgdmFsdWU9XCJSZWdpc3RlclwiIG9uQ2xpY2s9e3Byb3BzLnJlbmRlclJlZ2lzdGVyfS8+XG4gICAgPC9kaXY+XG4gIClcbn1cblxud2luZG93LkhvbWUgPSBIb21lOyJdfQ==
